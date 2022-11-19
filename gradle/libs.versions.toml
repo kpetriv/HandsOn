@@ -6,10 +6,19 @@ android-constraintlayout = "2.1.4"
 android-core = "1.9.0"
 android-material = "1.7.0"
 
+# Compose
+compose-bom = "2022.10.00"
+compose-activity = "1.5.1"
+compose-lifecycle-viewmodel = "2.5.1"
+
 # Test
 test-espresso = "3.4.0"
 test-junit4 = "4.13.2"
 test-junit = "1.1.3"
+
+# Firebase
+firebase-gms = "4.3.13"
+firebase-bom = "31.1.0"
 
 # Plugins
 plugins-agp = "7.3.1"
@@ -23,13 +32,35 @@ androidx-constraint-layout = { module = "androidx.constraintlayout:constraintlay
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "android-core" }
 androidx-material = { module = "com.google.android.material:material", version.ref = "android-material" }
 
+# Firebase
+firebase-gms = { module = "com.google.gms:google-services", version.ref = "firebase-gms" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+
+# Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-material = { group = "androidx.compose.material", name = "material" }
+
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose-lifecycle-viewmodel" }
+
+compose-ui-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+
 # Test
 test-android-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "test-espresso" }
 test-android-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "test-junit" }
 test-junit4 = { module = "junit:junit", version.ref = "test-junit4" }
+
+
+[bundles]
+androidx = ["androidx-appcompat", "androidx-constraint-layout", "androidx-core", "androidx-material" ]
+compose = ["compose-foundation", "compose-material", "compose-activity", "compose-viewmodel", "compose-ui-preview"]
 
 [plugins]
 
 android-application = { id = "com.android.application", version.ref = "plugins-agp" }
 android-library = { id = "com.android.library", version.ref = "plugins-agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
+firebase-gms = { id = "com.google.gms.google-services", version.ref = "firebase-gms" }

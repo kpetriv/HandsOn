@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id(libs.plugins.firebase.gms.get().pluginId)
 }
 
 android {
@@ -34,15 +35,31 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.2"
+    }
 }
 
 dependencies {
-    implementation(libs.androidx.core)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.material)
-    implementation(libs.androidx.constraint.layout)
+    implementation(libs.bundles.androidx)
 
     testImplementation(libs.test.junit4)
     androidTestImplementation(libs.test.android.junit.ktx)
     androidTestImplementation(libs.test.android.espresso)
+
+    val composeBom = platform(libs.compose.bom)
+    implementation(composeBom)
+    implementation(libs.bundles.compose)
+
+    androidTestImplementation(composeBom)
+    debugImplementation(libs.compose.ui.tooling)
+
+    val firebaseBom = platform(libs.firebase.bom)
+    implementation(firebaseBom)
+    implementation(libs.firebase.analytics)
 }
