@@ -26,6 +26,10 @@ android {
         jvmTarget = "11"
     }
 
+    android.sourceSets.all {
+        java.srcDir("src/$name/kotlin")
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
