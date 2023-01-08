@@ -11,6 +11,9 @@ compose-bom = "2022.10.00"
 compose-activity = "1.5.1"
 compose-lifecycle-viewmodel = "2.5.1"
 
+# Kotlin
+kotlin-serialization-json = "1.4.1"
+
 # Test
 test-espresso = "3.4.0"
 test-junit4 = "4.13.2"
@@ -23,6 +26,7 @@ firebase-bom = "31.1.0"
 # Plugins
 plugins-agp = "7.3.1"
 plugins-kotlin = "1.7.20"
+kotlin-serialization = "1.8.0"
 
 [libraries]
 
@@ -48,6 +52,9 @@ compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose",
 compose-ui-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 
+# Kotlin
+kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
+
 # Test
 test-android-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "test-espresso" }
 test-android-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "test-junit" }
@@ -55,7 +62,7 @@ test-junit4 = { module = "junit:junit", version.ref = "test-junit4" }
 
 
 [bundles]
-androidx = ["androidx-appcompat", "androidx-constraint-layout", "androidx-core", "androidx-material" ]
+androidx = ["androidx-appcompat", "androidx-constraint-layout", "androidx-core", "androidx-material"]
 compose = ["compose-foundation", "compose-material", "compose-activity", "compose-viewmodel", "compose-ui-preview"]
 
 [plugins]
@@ -63,4 +70,5 @@ compose = ["compose-foundation", "compose-material", "compose-activity", "compos
 android-application = { id = "com.android.application", version.ref = "plugins-agp" }
 android-library = { id = "com.android.library", version.ref = "plugins-agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization"}
 firebase-gms = { id = "com.google.gms.google-services", version.ref = "firebase-gms" }
