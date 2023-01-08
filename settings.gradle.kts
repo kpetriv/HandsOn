@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "HandsOn"
 include (":app")
+include(":network")
