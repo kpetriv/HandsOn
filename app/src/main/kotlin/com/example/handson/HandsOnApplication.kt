@@ -1,20 +1,23 @@
 package com.example.handson
 
 import android.app.Application
-import android.content.res.Configuration
+import com.example.handson.di.appModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 class HandsOnApplication : Application() {
 
-    // custom DI is initialized here
-
     override fun onCreate() {
         super.onCreate()
-        // Insert init block here for application setup
-    }
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        // Do stuff on configuration change here
+        startKoin {
+            // Log Koin into Android logger
+            androidLogger()
+            // Reference Android context
+            androidContext(this@HandsOnApplication)
+            // Load modules
+            modules(appModule)
+        }
     }
-
 }
