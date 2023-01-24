@@ -56,6 +56,12 @@ dependencies {
     androidTestImplementation(libs.test.android.junit.ktx)
     androidTestImplementation(libs.test.android.espresso)
 
+    implementation(libs.di.koin.core)
+    implementation(libs.di.koin.android.compat)
+    implementation(libs.di.koin.android)
+    implementation(libs.di.koin.androidx.compose)
+    implementation(libs.di.koin.androidx.navigation)
+
     val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
     implementation(libs.bundles.compose)
