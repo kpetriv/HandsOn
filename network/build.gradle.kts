@@ -40,6 +40,10 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.kotlin.serialization.json)
 
+    implementation(libs.network.ktor.serialization)
+    implementation(libs.network.ktor.client)
+    implementation(libs.network.ktor.loggin)
+
     testImplementation(libs.test.junit4)
     androidTestImplementation(libs.test.android.junit.ktx)
     androidTestImplementation(libs.test.android.espresso)

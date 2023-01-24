@@ -26,7 +26,10 @@ firebase-bom = "31.1.0"
 # Plugins
 plugins-agp = "7.4.0"
 plugins-kotlin = "1.7.20"
-kotlin-serialization = "1.8.0"
+kotlin-serialization = "1.7.20"
+
+# Network
+network-ktor = "1.6.8"
 
 [libraries]
 
@@ -52,6 +55,11 @@ compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose",
 compose-ui-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 
+# Network
+network-ktor-client = { module = "io.ktor:ktor-client-android", version.ref = "network-ktor" }
+network-ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "network-ktor" }
+network-ktor-loggin = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "network-ktor" }
+
 # Kotlin
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
 
@@ -70,5 +78,5 @@ compose = ["compose-foundation", "compose-material", "compose-activity", "compos
 android-application = { id = "com.android.application", version.ref = "plugins-agp" }
 android-library = { id = "com.android.library", version.ref = "plugins-agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "plugins-kotlin" }
-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization"}
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization" }
 firebase-gms = { id = "com.google.gms.google-services", version.ref = "firebase-gms" }
