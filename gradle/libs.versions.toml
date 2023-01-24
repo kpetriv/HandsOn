@@ -31,6 +31,12 @@ kotlin-serialization = "1.7.20"
 # Network
 network-ktor = "1.6.8"
 
+# DI
+koin-version= "3.3.2"
+koin-android_version= "3.3.2"
+koin-android_compose_version= "3.4.1"
+koin-ktor= "3.3.0"
+
 [libraries]
 
 # Android X
@@ -59,6 +65,19 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 network-ktor-client = { module = "io.ktor:ktor-client-android", version.ref = "network-ktor" }
 network-ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "network-ktor" }
 network-ktor-loggin = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "network-ktor" }
+
+# DI
+di-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-version" }
+di-koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-version" }
+di-koin-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin-version" }
+di-koin-junit5 = { module = "io.insert-koin:koin-test-junit5", version.ref = "koin-version" }
+di-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android_version" }
+di-koin-android-compat = { module = "io.insert-koin:koin-android-compat", version.ref = "koin-android_version" }
+di-koin-androidx-work-manager = { module = "io.insert-koin:koin-androidx-workmanager", version.ref = "koin-android_version" }
+di-koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation", version.ref = "koin-android_version" }
+di-koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin-android_compose_version" }
+di-koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin-ktor" }
+di-koin-logger = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin-ktor" }
 
 # Kotlin
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
