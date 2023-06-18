@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.kotlin.serialization.json)
 
     implementation(libs.network.ktor.serialization)
+    implementation(libs.network.ktor.content.negotiation)
     implementation(libs.network.ktor.client)
     implementation(libs.network.ktor.loggin)
 

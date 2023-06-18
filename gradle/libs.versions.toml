@@ -29,7 +29,7 @@ plugins-kotlin = "1.8.21"
 kotlin-serialization = "1.8.20"
 
 # Network
-network-ktor = "1.6.8"
+network-ktor = "2.3.1"
 
 # DI
 koin-version= "3.3.2"
@@ -63,7 +63,8 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 
 # Network
 network-ktor-client = { module = "io.ktor:ktor-client-android", version.ref = "network-ktor" }
-network-ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "network-ktor" }
+network-ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "network-ktor" }
+network-ktor-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "network-ktor" }
 network-ktor-loggin = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "network-ktor" }
 
 # DI
