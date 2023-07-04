@@ -4,12 +4,12 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-class User(
+data class User(
     @SerialName("name") val name: Name,
     @SerialName("email") val email: String,
 ) {
     @Serializable
-    class Name(
+    data class Name(
         @SerialName("first") val first: String,
         @SerialName("last") val last: String,
     )

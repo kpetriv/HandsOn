@@ -40,10 +40,13 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.kotlin.serialization.json)
 
+    implementation(libs.di.koin.core)
+
     implementation(libs.network.ktor.serialization)
     implementation(libs.network.ktor.content.negotiation)
     implementation(libs.network.ktor.client)
     implementation(libs.network.ktor.loggin)
+    implementation("androidx.paging:paging-common-ktx:3.1.1")
 
     testImplementation(libs.test.junit4)
     androidTestImplementation(libs.test.android.junit.ktx)

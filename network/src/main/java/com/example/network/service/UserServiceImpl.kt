@@ -1,5 +1,6 @@
 package com.example.network.service
 
+import android.util.Log
 import com.example.network.client.BASE_URL
 import com.example.network.client.NetworkResult
 import com.example.network.dto.Page
@@ -16,6 +17,7 @@ class UserServiceImpl(
         results: Int,
     ): NetworkResult<Page<User>> {
         return try {
+            Log.d("TEST", "calling getUsers in service")
             NetworkResult.Success(
                 client.get(BASE_URL) {
                     url {

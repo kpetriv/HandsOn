@@ -50,6 +50,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":network"))
+
     implementation(libs.bundles.androidx)
 
     testImplementation(libs.test.junit4)
