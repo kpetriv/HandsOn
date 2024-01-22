@@ -25,7 +25,7 @@ firebase-gms = "4.3.13"
 firebase-bom = "32.1.0"
 
 # Plugins
-plugins-agp = "8.0.2"
+plugins-agp = "8.1.2"
 plugins-kotlin = "1.8.21"
 kotlin-serialization = "1.8.20"
 

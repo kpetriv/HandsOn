@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.handson"
+    namespace = "com.example.handson.network"
     compileSdk = 33
 
     defaultConfig {
