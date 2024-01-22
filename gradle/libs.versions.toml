@@ -5,6 +5,7 @@ android-appcompat = "1.6.1"
 android-constraintlayout = "2.1.4"
 android-core = "1.10.1"
 android-material = "1.8.0"
+paging-common-ktx = "3.1.1"
 
 # Compose
 compose-bom = "2023.05.01"
@@ -44,6 +45,7 @@ androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "a
 androidx-constraint-layout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "android-constraintlayout" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "android-core" }
 androidx-material = { module = "com.google.android.material:material", version.ref = "android-material" }
+androidx-paging-common-ktx = { module = "androidx.paging:paging-common-ktx", version.ref = "paging-common-ktx" }
 
 # Firebase
 firebase-gms = { module = "com.google.gms:google-services", version.ref = "firebase-gms" }
